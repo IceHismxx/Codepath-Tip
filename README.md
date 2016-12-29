@@ -34,6 +34,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Setting a segmented control to a particular selection, was pretty easy after asking someone.
+
 format currency with locale was kind of a pain but pretty easy now.
 
 ## License
