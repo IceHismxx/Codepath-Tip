@@ -22,10 +22,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        defaultTip = defaults.integer(forKey: "defaultTip")
-        tipControl.selectedSegmentIndex = defaultTip
         // Do any additional setup after loading the view, typically from a nib.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        defaultTip = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = defaultTip
+        // This is a good place to retrieve the default tip percentage from UserDefaults
+        // and use it to update the tip amount
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         billField.becomeFirstResponder()
