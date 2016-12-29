@@ -14,6 +14,7 @@
 		7CE61ED81E132E900088D6A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE61ED61E132E900088D6A3 /* LaunchScreen.storyboard */; };
 		7CE61EE31E132E900088D6A3 /* CodePath_TipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE61EE21E132E900088D6A3 /* CodePath_TipTests.swift */; };
 		7CE61EEE1E132E900088D6A3 /* CodePath_TipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE61EED1E132E900088D6A3 /* CodePath_TipUITests.swift */; };
+		7CF519F01E15AD9E00FA1FEA /* settingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF519EF1E15AD9E00FA1FEA /* settingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7CE61EE91E132E900088D6A3 /* CodePath-TipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CodePath-TipUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE61EED1E132E900088D6A3 /* CodePath_TipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePath_TipUITests.swift; sourceTree = "<group>"; };
 		7CE61EEF1E132E900088D6A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF519EF1E15AD9E00FA1FEA /* settingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				7CE61ECD1E132E900088D6A3 /* AppDelegate.swift */,
 				7CE61ECF1E132E900088D6A3 /* ViewController.swift */,
 				7CE61ED11E132E900088D6A3 /* Main.storyboard */,
+				7CF519EF1E15AD9E00FA1FEA /* settingsController.swift */,
 				7CE61ED41E132E900088D6A3 /* Assets.xcassets */,
 				7CE61ED61E132E900088D6A3 /* LaunchScreen.storyboard */,
 				7CE61ED91E132E900088D6A3 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				7CE61ED01E132E900088D6A3 /* ViewController.swift in Sources */,
 				7CE61ECE1E132E900088D6A3 /* AppDelegate.swift in Sources */,
+				7CF519F01E15AD9E00FA1FEA /* settingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				7CE61EF41E132E900088D6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CE61EF51E132E900088D6A3 /* Build configuration list for PBXNativeTarget "CodePath-TipTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				7CE61EF71E132E900088D6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CE61EF81E132E900088D6A3 /* Build configuration list for PBXNativeTarget "CodePath-TipUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				7CE61EFA1E132E900088D6A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

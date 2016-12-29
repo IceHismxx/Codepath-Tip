@@ -87,7 +87,18 @@
                             <outletCollection property="gestureRecognizers" destination="UoX-rr-ze9" appends="YES" id="qoB-b0-Lje"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="vxj-J3-dXs"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="vxj-J3-dXs">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="9uR-2t-98t">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="orA-4v-9UL">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="nAo-Ao-8bG" kind="push" id="and-B5-b3v"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="FBx-Fu-Q1L" id="kKM-3k-Z02"/>
                         <outlet property="tipControl" destination="SEE-7D-Img" id="n98-2Q-Dex"/>
@@ -103,18 +114,65 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="537.5" y="154.5"/>
+            <point key="canvasLocation" x="436" y="155"/>
+        </scene>
+        <!--secondView-->
+        <scene sceneID="f5f-VG-Vi3">
+            <objects>
+                <viewController title="secondView" id="nAo-Ao-8bG" customClass="settingsController" customModule="CodePath_Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iEQ-NV-8Kn"/>
+                        <viewControllerLayoutGuide type="bottom" id="NhX-dU-TOX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UlG-IQ-O4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wus-8a-qNc">
+                                <rect key="frame" x="16" y="140" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="DefaultTipChange:" destination="nAo-Ao-8bG" eventType="valueChanged" id="1p9-kO-QGa"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Percentages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewg-dg-l7G">
+                                <rect key="frame" x="16" y="96" width="205" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="JUY-eK-Fh1"/>
+                    <connections>
+                        <outlet property="defaultTipPercentage" destination="wus-8a-qNc" id="g8l-8f-elk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDU-JN-YP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896.5" y="154.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="56t-Bd-0oN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aoo-HX-qfE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="aoo-HX-qfE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="AqM-hq-akU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Vny-aa-Z8J">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bJk-Yt-off"/>
                     </connections>

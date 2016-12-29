@@ -15,10 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalArea: UIView!
+    @IBOutlet weak var defaultTipPercentage: UISegmentedControl!
+    var defaultTip = 0
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        defaultTip = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = defaultTip
+        billField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +55,7 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
     }
+
     
 
 
