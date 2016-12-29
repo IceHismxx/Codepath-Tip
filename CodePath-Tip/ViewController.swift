@@ -19,11 +19,15 @@ class ViewController: UIViewController {
     var defaultTip = 0
     let defaults = UserDefaults.standard
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         defaultTip = defaults.integer(forKey: "defaultTip")
         tipControl.selectedSegmentIndex = defaultTip
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         billField.becomeFirstResponder()
     }
 
@@ -49,12 +53,16 @@ class ViewController: UIViewController {
         let tipPercentages = [0.15,0.20,0.25]
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = bill + tip
+        let total = (bill + tip) as NSNumber
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.groupingSeparator = ","
+        let currencysymbol = Locale.current.currencySymbol
         
-        
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        tipLabel.text = String(format: (currencysymbol ?? "$") + "%.2f", tip)
+        totalLabel.text = formatter.string(from: total)
     }
+    
 
     
 
